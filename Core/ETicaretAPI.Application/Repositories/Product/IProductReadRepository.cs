@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ETicaretAPI.Application.Repositories
 {
-    public  interface ProductReadRepository :IReadRepository<Product>
+    public  interface IProductReadRepository :IReadRepository<Product>
     {
     }
 }
