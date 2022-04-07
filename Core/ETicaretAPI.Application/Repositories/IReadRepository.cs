@@ -12,16 +12,16 @@ namespace ETicaretAPI.Application.Repositories
     //Veritabanındaki işlemleri,sorguları  modelledik 
     public interface IReadRepository<T> : IRepository<T> where T : BaseEntity
     {
-        // hangi türde isek (T) bana bütün verileri getir
-        IQueryable<T> GetAll();
+        // hangi türde isek (T) bana   verileri getir
+        IQueryable<T> GetAll(bool tracking =true);
 
         //Şarta uygun olan birden fazla veri elde edilsin 
-        IQueryable<T> GetWhere(Expression<Func<T,bool>>method);
+        IQueryable<T> GetWhere(Expression<Func<T,bool>>method, bool tracking = true);
 
         //Şarta uygun olan ilk veriyi getirir 
-        Task<T> GetSingleAsync(Expression<Func<T,bool>>method);
+        Task<T> GetSingleAsync(Expression<Func<T,bool>>method, bool tracking = true);
          
         //Id ye uygun hangisi ise onu getirecek 
-        Task<T> GetByIdAsync(string id);
+        Task<T> GetByIdAsync(string id, bool tracking = true);
     }
 }

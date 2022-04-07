@@ -13,7 +13,7 @@ namespace ETicaretAPI.Domain.Entities
 
         public int Stock { get; set; }
 
-        public long Price { get; set; }
+        public float Price { get; set; }
 
         //Bir Product birden fazla Orders u olduğunu ifade ediyor.
         public ICollection<Order> Orders { get; set; }

@@ -18,5 +18,10 @@ namespace ETicaretAPI.Persistence.Contexts
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Customer> Customers { get; set; }
+
+        public override Task<int>SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            return base.SaveChangesAsync(cancellationToken);  
+        }
     }
 }
