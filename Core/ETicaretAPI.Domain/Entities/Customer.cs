@@ -14,3 +14,4 @@ namespace ETicaretAPI.Domain.Entities
 
     }
 }
+
